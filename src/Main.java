@@ -31,6 +31,9 @@ public class Main {
         System.out.println();
         System.out.println();
         pattern11(5);
+        System.out.println();
+        System.out.println();
+        pattern12(5);
     }
 
     static void pattern1(int n){
@@ -145,6 +148,19 @@ public class Main {
             if (row > n) stars=2*n-row;
             for (int col = 1; col <= stars; col++) {
                 System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void pattern12(int n){
+        int start = 1;
+        for (int row = 1; row <= n ; row++) {
+            if (row % 2 == 0) start = 0;
+            else start=1;
+            for (int col = 1; col <= row ; col++) {
+                System.out.print(start+" ");
+                start = 1-start;
             }
             System.out.println();
         }
